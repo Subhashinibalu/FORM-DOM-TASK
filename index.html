@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation with forms</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+
+    <div class="container mt-2">
+      <div class="col-8 ms-auto me-auto border-black-1">
+        <h1 id="title" class="mt-2 fw-bolder ms-auto me-auto">SURVEY FORM</h1>
+        <p id="description" class="text-primary mt-0">
+          This is survey form is for getting basic details of a person
+        </p>
+        <br />
+
+        <form id="survey-form" class="survey-form" name="myform">
+          <!-- NAME -->
+          <div class="row form-group">
+            <label for="name" id="name-label" class="form-label fw-bold"
+              >Name<span class="text-danger">*</span></label
+            >
+            <div class="col-lg-4 col-sm-8">
+              <input
+                type="text"
+                class="form-control"
+                id="first-name"
+                name = firstname
+                placeholder="Enter your first name"
+                aria-label="First name"
+                required
+              />
+              <label for="first-name" class="form-label">First Name</label>
+            </div>
+            <div class="col-lg-4 col-sm-8">
+              <input
+                type="text"
+                class="form-control"
+                id="last-name"
+                name="lastname"
+                placeholder="Enter your last name"
+                aria-label="Last name"
+                required
+              />
+              <label for="last-name" class="form-label">Last Name</label>
+            </div>
+          </div>
+          <br />
+          <!-- mail -->
+          <div class="row form-group">
+            <div class="col-sm-8 col-lg-8">
+              <label for="email" class="form-label fw-bold" id="email-label"
+                >Email <span class="text-danger">*</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter your mail id"
+                required
+              />
+            </div>
+          </div>
+          <br />
+
+          <!-- address & pincode -->
+          <div class="row form-group">
+            <div class="col-lg-5 col-sm-8">
+              <label for="address" class="form-label fw-bold" id="address-label"
+                >Address <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                name="address"
+                placeholder="Enter your Address"
+                required
+              />
+            </div>
+            <div class="col-lg-3 col-sm-8">
+              <label for="pincode" class="form-label fw-bold" id="pincode-label"
+                >Pincode <span class="text-danger">*</span></label
+              >
+              <input
+                type="pincode"
+                class="form-control"
+                id="pincode"
+                name="pincode"
+                aria-label="pincode"
+                required
+              />
+            </div>
+          </div>
+          <br />
+
+          <!-- gender -->
+
+          <div class="row form-group">
+            <div class="col-lg-12 col-sm-12">
+              <label for="gender" class="form-label fw-bold" id="gender-label"
+                >Gender <span class="text-danger">*</span></label
+              >
+            </div>
+
+            <span class="col-lg-2 col-sm-3"
+              ><input
+                type="radio"
+                name="gender"
+                class="gender"
+                value="Male"
+              />Male</span
+            >
+            <span class="col-lg-2 col-sm-3">
+              <input type="radio" name="gender" class="gender" value="Female" />
+              Female</span
+            >
+          </div>
+          <br />
+
+          <!-- food -->
+
+          <div class="row form-group">
+            <div class="col-lg-12 col-sm-12">
+              <label for="food" class="form-label fw-bold" id="food-label"
+                >Choice of Food <span class="text-danger">*</span></label
+              >
+            </div>
+            <span class="col-lg-2 col-sm-4"
+              ><input type="checkbox" name="food" id="Meals" class ="food" value="Meals" />
+              <label for="food">Meals🍛</label>
+            </span>
+            <span class="col-lg-2 col-sm-4">
+              <input type="checkbox" name="food" id="Briyani" class ="food" value="Briyani" />
+              <label for="food">Briyani🥗</label></span
+            >
+
+            <span class="col-lg-2 col-sm-4"
+              ><input
+                type="checkbox"
+                name="food"
+                id="Noodles"
+                value="Noodles"
+                class ="food"
+              />
+              <label for="food">Noodles🍜</label>
+            </span>
+            <span class="col-lg-2 col-sm-4">
+              <input type="checkbox" name="food" id="Burger" class ="food" value="Burger" />
+              <label for="css">Burger🍔</label></span
+            >
+            <span class="col-lg-2 col-sm-4"
+              ><input type="checkbox" name="food" id="Pizza" class ="food" value="Pizza" />
+              <label for="css">Pizza🍕</label></span
+            >
+          </div>
+          <br />
+          <!-- STATE -->
+          <div class="row form-group">
+            <div class="col-lg-4 col-sm-8">
+              <label
+                for="state-name"
+                id="state-label"
+                class="form-label fw-bold"
+                >State <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="state-name"
+                name="statename"
+                aria-label="State name"
+                required
+              />
+            </div>
+          </div>
+          <br />
+
+          <!-- COUNTRY -->
+          <div class="row form-group">
+            <div class="col-lg-4 col-sm-8">
+              <label
+                for="country-name"
+                id="country-label"
+                class="form-label fw-bold"
+                >Country <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="country-name"
+                name="countryname"
+                aria-label="Country name"
+                required
+              />
+            </div>
+          </div>
+          <br />
+
+          <!-- Text area -->
+          <div class="row form-group">
+            <div class="mb-3 col-8">
+              <label for="comments" class="form-label fw-bold"
+                >Additional comments or suggestions</label
+              >
+              <textarea class="form-control" id="comments" name="textarea" rows="5"></textarea>
+            </div>
+            <br />
+
+            <!-- submit -->
+            <div class="row form-group btn">
+              <div class="col-lg-1 col-sm-2">
+                <button class="btn btn-primary" type="submit" name="submit" id="submit" >
+                  submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <br />
+        <br />
+
+        <!-- table -->
+
+        <h3>Filled Form Data</h3>
+        <br>
+        <table class="table table-striped" name="table" id="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Pincode</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Food</th>
+              <th scope="col">State</th>
+              <th scope="col">Country</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="width: fit-content;">
+              <th scope="row"  >1</th>
+              <td id="table-first"></td>
+              <td id="table-last"></td>
+              <td id="table-address"></td>
+              <td id="table-pincode"></td>
+              <td id="table-gender"></td>
+              <td id="table-food"></td>
+              <td id="table-state"></td>
+              <td id="table-country"></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+</html>
